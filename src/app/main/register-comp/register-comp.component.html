@@ -18,4 +18,12 @@
       </div>
       <button type="submit" class="btn btn-primary reg-btn">Registrar</button>
   </form>
+  <!-- Adiciona a mensagem de confirmação -->
+  <div *ngIf="registroBemSucedido" class="alert alert-success mt-3" role="alert">
+    Usuário registrado com sucesso!
+  </div>
+  <!-- Adiciona a mensagem de erro -->
+  <div *ngIf="registroFalhou" class="alert alert-danger mt-3" role="alert">
+    Erro ao registrar usuário. Por favor, tente novamente.
+  </div>
 </div>
