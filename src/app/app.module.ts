@@ -7,12 +7,14 @@ import { MainCompComponent } from './main/main-comp/main-comp.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { RegisterCompComponent } from './main/register-comp/register-comp.component';
 import { HttpClientModule } from '@angular/common/http';
+import { ChatCompComponent } from './main/chat-comp/chat-comp.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     MainCompComponent,
     RegisterCompComponent,
+    ChatCompComponent,
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,28 @@
+.messages-container {
+    width: 400px;
+    height: 400px;
+    margin: auto;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 20px;
+  }
+  
+  .message-box {
+    height: 300px;
+    overflow-y: auto;
+    margin-bottom: 10px;
+    color: white;
+  }
+  
+  .message-input textarea {
+    width: calc(100% - 80px);
+    height: 60px;
+    resize: none;
+    margin-bottom: 10px;
+  }
+  
+  .message-input button {
+    width: 80px;
+    height: 60px;
+    transform: translateY(-55%);
+  }

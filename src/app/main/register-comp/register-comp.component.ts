@@ -17,6 +17,7 @@ export class RegisterCompComponent {
   irParaHome() {
     this.router.navigate(['/home']);
   }
+  ShowContent: boolean = true;
   
   registrarUsuario() {
     const nome = (document.getElementById('InputName1') as HTMLInputElement).value;
@@ -31,6 +32,8 @@ export class RegisterCompComponent {
           console.log('Usuário registrado com sucesso!', response);
           this.registroBemSucedido = true; // Define a variável para true após o registro bem-sucedido
           this.registroFalhou = false; // Reseta a variável de erro
+          this.ShowContent = false;
+          this.router.navigate(['/chat']);
         },
         (error: HttpErrorResponse) => {
           console.error('Erro ao registrar usuário:', error);
