@@ -33,7 +33,7 @@ export class RegisterCompComponent {
           this.registroBemSucedido = true; // Define a variável para true após o registro bem-sucedido
           this.registroFalhou = false; // Reseta a variável de erro
           this.ShowContent = false;
-          this.router.navigate(['/chat']);
+          this.router.navigate(['/home']);
         },
         (error: HttpErrorResponse) => {
           console.error('Erro ao registrar usuário:', error);

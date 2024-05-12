@@ -29,6 +29,7 @@ export class MainCompComponent {
         // Login bem-sucedido
         console.log('Login bem-sucedido:', response);
         this.usuarioLogado = response.usuario; // Armazena os detalhes do usuário
+        this.ShowContent = false;
         // Redireciona para a página de chat ou outra página desejada
         this.router.navigate(['/chat']);
       },

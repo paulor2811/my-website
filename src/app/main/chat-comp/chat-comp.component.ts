@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { UserService } from '../../utils/user.service';
+import { ChatService } from '../../utils/chat.service';
 
 @Component({
   selector: 'app-chat-comp',
@@ -10,13 +10,23 @@ export class ChatCompComponent {
   newMessage: string = '';
   messages: { user: string, message: string }[] = [];
 
-  constructor(private userService: UserService) {}
+  constructor(private chatService: ChatService) {}
 
   sendMessage() {
     if (this.newMessage.trim() !== '') {
-      // Adiciona a mensagem com o nome do usuário
-      this.messages.push({ user: this.userService.usuarioLogado.nome, message: this.newMessage });
-      this.newMessage = '';
+      // Envia a nova mensagem para o servidor
+      this.chatService.enviarMensagem({ user: 'Nome do usuário', message: this.newMessage }).subscribe(
+        response => {
+          console.log('Mensagem enviada com sucesso:', response);
+          // Adiciona a mensagem à lista localmente
+          this.messages.push({ user: 'Nome do usuário', message: this.newMessage });
+          this.newMessage = ''; // Limpa o campo de entrada
+        },
+        error => {
+          console.error('Erro ao enviar mensagem:', error);
+          // Trate o erro, se necessário
+        }
+      );
     }
   }
 }
