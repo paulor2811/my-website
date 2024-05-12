@@ -1,10 +1,12 @@
 <div class="messages-container">
-    <div class="message-box">
-      <div *ngFor="let message of messages">{{ message }}</div>
-    </div>
-    <div class="message-input">
-      <textarea [(ngModel)]="newMessage" placeholder="Digite sua mensagem"></textarea>
-      <button (click)="sendMessage()">Enviar</button>
+  <div class="message-box">
+    <div *ngFor="let message of messages">
+      <span class="username">{{ message.user }}:</span>
+      <div class="message">{{ message.message }}</div>
     </div>
   </div>
-  
+  <div class="message-input">
+    <textarea [(ngModel)]="newMessage" placeholder="Digite sua mensagem"></textarea>
+    <button (click)="sendMessage()">Enviar</button>
+  </div>
+</div>

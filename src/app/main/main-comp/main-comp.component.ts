@@ -15,6 +15,7 @@ export class MainCompComponent {
   email: string = '';
   senha: string = '';
   errorMessage: string = '';
+  usuarioLogado: any = null; // Armazena os detalhes do usuário após o login
 
   irParaFormulario() {
     this.ShowContent = false;
@@ -27,7 +28,7 @@ export class MainCompComponent {
       (response: any) => {
         // Login bem-sucedido
         console.log('Login bem-sucedido:', response);
-        this.ShowContent = false;
+        this.usuarioLogado = response.usuario; // Armazena os detalhes do usuário
         // Redireciona para a página de chat ou outra página desejada
         this.router.navigate(['/chat']);
       },
