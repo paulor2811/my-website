@@ -1,0 +1,21 @@
+<div class="home">
+  <button (click)="irParaHome()" type="submit" class="btn-home">Home</button>
+</div>
+<div class="container border p-4">
+  <h1>Registre-se</h1>
+  <form (ngSubmit)="registrarUsuario()">
+      <div class="mb-3">
+          <label for="Name" class="form-label lb-name">Nome</label>
+          <input type="text" class="form-control" id="InputName1" aria-describedby="Nome" name="nome">
+      </div>
+      <div class="mb-3">
+        <label for="InputEmail1" class="form-label lb-email">Endereço de Email</label>
+        <input type="email" class="form-control" id="InputEmail1" aria-describedby="Email" name="email">
+      </div>
+      <div class="mb-3">
+        <label for="InputPassword1" class="form-label lb-pass">Senha</label>
+        <input type="password" class="form-control" id="InputPassword1" name="senha">
+      </div>
+      <button type="submit" class="btn btn-primary reg-btn">Registrar</button>
+  </form>
+</div>

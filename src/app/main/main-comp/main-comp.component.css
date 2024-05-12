@@ -1,0 +1,23 @@
+  .container {
+    max-width: 500px; /* Ajuste o valor conforme necessário */
+    margin: 0 auto; /* Isso centraliza a div na tela */
+    transform: translateY(90%);
+
+    color: white;
+  }
+
+  .lb-email {
+    font-weight: bold;
+  }
+  
+  .lb-pass {
+    font-weight: bold;
+  }
+  
+  button {
+    transform: translateX(185%);
+  }
+
+  .form-text {
+    color: white;
+  }

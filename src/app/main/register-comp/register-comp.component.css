@@ -1,0 +1,29 @@
+h1 {
+    transform: translateX(35%);
+}
+
+.container {
+    max-width: 680px; /* Ajuste o valor conforme necessário */
+    margin: 0 auto; /* Isso centraliza a div na tela */
+    transform: translateY(90%);
+    
+    color: white;
+}
+
+.form-control {
+    width: 500px;
+    transform: translateX(24%);
+}
+.mb-3 {
+    position: relative;
+}
+
+label {
+    position: absolute;
+    top: 30%;
+    color: #ffffff; /* Cor da etiqueta */
+}
+
+.btn.btn-primary.reg-btn {
+    transform: translateX(312%);
+}

@@ -1,1 +1,8 @@
-/* You can add global styles to this file, and also import other style files */
+/* No arquivo src/styles.css */
+@import "bootstrap/dist/css/bootstrap.min.css";
+
+body {
+    background-image: url('./assets/bg.png'); /* Substitua pelo caminho da sua imagem */
+    background-size: cover; /* Ajusta o tamanho da imagem para cobrir todo o contêiner */
+    background-position: center; /* Centraliza a imagem no contêiner */
+}
