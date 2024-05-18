@@ -1,6 +1,6 @@
 <div class="messages-container">
   <div class="message-box">
-    <div *ngFor="let message of messages">
+    <div *ngFor="let message of messages" class="message-item">
       <span class="username">{{ message.user }}:</span>
       <div class="message">{{ message.message }}</div>
     </div>
